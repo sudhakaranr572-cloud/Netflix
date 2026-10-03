@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  min-height: 100vh;
+  background: #0b0b0b;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+
+.navbar {
+  height: 70px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.9);
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #e50914;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.login-btn {
+  background: #e50914;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+  height: 550px;
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #0b0b0b 0%,
+      rgba(11, 11, 11, 0.85) 35%,
+      rgba(11, 11, 11, 0.2) 80%
+    ),
+    url("https://image.tmdb.org/t/p/original/8bcoRX3hQRHufLPSDREdvr3YMXx.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+.small-title {
+  color: #e50914;
+  font-weight: bold;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #ccc;
+  line-height: 1.7;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.watch-btn,
+.info-btn {
+  border: none;
+  padding: 13px 25px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.watch-btn {
+  background: white;
+  color: black;
+}
+
+.info-btn {
+  background: rgba(100, 100, 100, 0.7);
+  color: white;
+}
+
+/* Movie Section */
+
+.movies-section {
+  padding: 40px 6%;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 25px;
+}
+
+.section-header span {
+  color: #aaa;
+  cursor: pointer;
+}
+
+.movie-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+}
+
+.movie-container::-webkit-scrollbar {
+  height: 5px;
+}
+
+.movie-container::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+.movie-card {
+  min-width: 190px;
+  background: #151515;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.06);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 12px;
+}
+
+.movie-info h3 {
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+.movie-info p {
+  color: #ffc107;
+  font-size: 14px;
+}
+
+/* Categories */
+
+.categories {
+  padding: 20px 6% 60px;
+}
+
+.categories h2 {
+  margin-bottom: 20px;
+}
+
+.category-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.category {
+  padding: 15px 30px;
+  background: #181818;
+  border: 1px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category:hover {
+  background: #e50914;
+  border-color: #e50914;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    height: 500px;
+    padding: 30px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .movie-card {
+    min-width: 150px;
+  }
+
+  .movie-card img {
+    height: 220px;
+  }
+}
